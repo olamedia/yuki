@@ -53,6 +53,7 @@ class yCoreAutoloader extends yAutoloader{
         'yMethodDocumentor'=>'doc/yMethodDocumentor.php',
         'yPage'=>'page/yPage.php',
         'yPageMetaCollection'=>'page/yPageMetaCollection.php',
+        'yRegistry'=>'registry/yRegistry.php',
         'yStyleTag'=>'html/yStyleTag.php',
         'yTextInput'=>'forms/yTextInput.php',
         'yTextNode'=>'html/yTextNode.php',
