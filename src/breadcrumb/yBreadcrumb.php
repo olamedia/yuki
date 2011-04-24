@@ -22,8 +22,8 @@
  * @link http://www.google.com/webmasters/tools/richsnippets
  * @link http://www.data-vocabulary.org/Breadcrumb/
  *
- * @package yuki
- * @subpackage breadcrumb
+ * @package Expression package is undefined on line 12, column 15 in Templates/Scripting/PHPClass.php.
+ * @subpackage 
  * @author olamedia
  * @license http://www.opensource.org/licenses/mit-license.php MIT
  */
@@ -42,6 +42,9 @@ class yBreadcrumb implements Countable{
     }
     public function append($child){
         $this->_child = $child;
+    }
+    public function prepend($parent){
+        $parent->append($this);
     }
     public function getLinkHtml(){
         return '<a href="'.$this->_url.'" itemprop="url" rel="v:url">'.
