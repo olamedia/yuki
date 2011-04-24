@@ -1,8 +1,13 @@
 <?php
 
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * This file is part of the yuki package.
+ * Copyright (c) 2011 olamedia <olamedia@gmail.com>
+ *
+ * This source code is release under the MIT License.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 /**
@@ -10,9 +15,6 @@
  *
  * @package yuki
  * @subpackage html
- * @version SVN: $Id$
- * @revision SVN: $Revision$
- * @date $Date$
  * @author olamedia
  * @license http://www.opensource.org/licenses/mit-license.php MIT
  */
