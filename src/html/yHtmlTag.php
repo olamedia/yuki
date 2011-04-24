@@ -70,6 +70,9 @@ class yHtmlTag implements ArrayAccess{
         $this->appendChild($textNode);
         return $this;
     }
+    public function text($text = ''){
+        return $this->setText($text);
+    }
     public static function create($name = 'html', $attr = array(), $closed = false){
         if (isset(self::$_tagMap[$name])){
             $class = self::$_tagMap[$name];
