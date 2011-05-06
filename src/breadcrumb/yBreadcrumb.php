@@ -36,6 +36,20 @@ class yBreadcrumb implements Countable{
      * @var yBreadcrumb 
      */
     protected $_child = null;
+    public function getUrl(){
+        return $this->_url;
+    }
+    public function setUrl($url){
+        $this->_url = $url;
+        return $this;
+    }
+    public function getTitle(){
+        return $this->_title;
+    }
+    public function setTitle($title){
+        $this->_title = $title;
+        return $this;
+    }
     public function __construct($url, $title){
         $this->_url = $url;
         $this->_title = $title;
@@ -48,8 +62,8 @@ class yBreadcrumb implements Countable{
     }
     public function getLinkHtml(){
         return '<a href="'.$this->_url.'" itemprop="url" rel="v:url">'.
-        '<span itemprop="title" property="v:title">'.htmlspecialchars($this->_title).'</span>'.
-        '</a>';
+                '<span itemprop="title" property="v:title">'.htmlspecialchars($this->_title).'</span>'.
+                '</a>';
     }
     /**
      * <div itemprop="child" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
