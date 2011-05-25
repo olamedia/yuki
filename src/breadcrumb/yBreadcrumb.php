@@ -62,7 +62,10 @@ class yBreadcrumb implements Countable{
     }
     public function getLinkHtml(){
         return '<a href="'.$this->_url.'" itemprop="url" rel="v:url">'.
-                '<span itemprop="title" property="v:title">'.htmlspecialchars($this->_title).'</span>'.
+                '<span itemprop="title" property="v:title">'.
+                // do not encode existing html entities
+                htmlspecialchars($this->_title, ENT_QUOTES, 'UTF-8', false).
+                '</span>'.
                 '</a>';
     }
     /**
