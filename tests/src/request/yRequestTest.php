@@ -73,36 +73,19 @@ class yRequestTest extends PHPUnit_Framework_TestCase{
         $this->assertEquals('post', $r->getArg('post'));
         $this->assertEquals('post', $r->getArg('get,post')); // $_POST is preferred
     }
-    /**
-     * @todo Implement testFromEnvironment().
-     */
     public function testFromEnvironment(){
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-                'This test has not been implemented yet.'
-        );
+        $_GET['a'] = 'get';
+        $_POST['a'] = 'post';
+        $_SERVER['a'] = 'server';
+        $r = yRequest::fromEnvironment();
+        $this->assertEquals('get', $r->getGetArg('a'));
+        $this->assertEquals('post', $r->getPostArg('a'));
+        $this->assertEquals('server', $r->getServerArg('a'));
     }
-    /**
-     * @todo Implement testIsCli().
-     */
     public function testIsCli(){
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-                'This test has not been implemented yet.'
-        );
+        $r = new yRequest;
+        $this->assertEquals(true, $r->isCli());
     }
-    /**
-     * @todo Implement testGetServerParameter().
-     */
-    public function testGetServerParameter(){
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-                'This test has not been implemented yet.'
-        );
-    }
-    /**
-     * @todo Implement testGetMethod().
-     */
     public function testGetMethod(){
         $r = new yRequest;
         $this->assertEquals(false, $r->isPost());
@@ -173,33 +156,22 @@ class yRequestTest extends PHPUnit_Framework_TestCase{
             'DOCUMENT_URI'=>'/test?a=b',
         ));
         $this->assertEquals('/test?a=b', $r->getRequestUriString());
-    }
-    /**
-     * @todo Implement testGetRequestUriString().
-     */
-    public function testGetRequestUriString(){
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-                'This test has not been implemented yet.'
-        );
-    }
-    /**
-     * @todo Implement testGetServerName().
-     */
-    public function testGetServerName(){
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-                'This test has not been implemented yet.'
-        );
-    }
-    /**
-     * @todo Implement testGetDomainName().
-     */
-    public function testGetDomainName(){
-        // Remove the following lines when you implement this test.
-        $this->markTestIncomplete(
-                'This test has not been implemented yet.'
-        );
+
+
+        $r->setServerArray(array(
+            'REMOTE_ADDR'=>'127.0.0.1',
+        ));
+        $this->assertEquals('127.0.0.1', $r->getIp());
+        $r->setServerArray(array(
+            'HTTP_X_FORWARDED_FOR'=>'127.0.0.1',
+        ));
+        $this->assertEquals('127.0.0.1', $r->getIp());
+        $r->setServerArray(array(
+            'REMOTE_ADDR'=>'127.0.0.1',
+            'HTTP_X_FORWARDED_FOR'=>'192.168.0.1',
+        ));
+        $this->assertEquals('192.168.0.1', $r->getIp());
+        $this->assertEquals('c', $r->getServerParameter('a', 'b', 'c'));
     }
 }
 
