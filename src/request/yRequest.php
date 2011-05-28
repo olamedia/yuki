@@ -143,10 +143,11 @@ class yRequest{
     public function getUseragent($default = ''){
         return $this->getServerParameter('HTTP_USER_AGENT', $default);
     }
-    public function getIp(){
+    public function getIp($default = ''){
         // 1. REMOTE_ADDR - default
         // 2. X-Forwarded-For - proxy
         // 3. HTTP_X_FORWARDED_FOR - proxy 
+        return $this->getServerParameter('HTTP_X_FORWARDED_FOR', 'REMOTE_ADDR', $default);
     }
 }
 
