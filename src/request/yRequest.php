@@ -26,8 +26,13 @@ class yRequest{
         $this->_get = $array;
         return $this;
     }
-    public function setPostArray($array){
-        $this->_post = $array;
+    public function setPostArray(&$array, $link = true){
+        if ($link){
+            $this->_post = &$array;
+        }else{
+            unset($this->_post); // !! remove reference
+            $this->_post = $array; //array_diff_assoc($array, array());
+        }
         return $this;
     }
     public function setServerArray($array){
@@ -43,11 +48,31 @@ class yRequest{
         ;
         return $request;
     }
-    public static function isCli(){
+    public function isCli(){
         return (PHP_SAPI == 'cli');
     }
+    public function getGetArg($name, $default = null){
+        return array_key_exists($name, $this->_get)?$this->_get[$name]:$default;
+    }
+    public function getPostArg($name, $default = null){
+        return array_key_exists($name, $this->_post)?$this->_post[$name]:$default;
+    }
+    public function getServerArg($name, $default = null){
+        return array_key_exists($name, $this->_server)?$this->_server[$name]:$default;
+    }
+    public function getArg($name, $default = null){
+        $post = $this->getPostArg($name, null);
+        if ($post !== null){
+            return $post;
+        }
+        $get = $this->getGetArg($name, null);
+        if ($get !== null){
+            return $get;
+        }
+        return $default;
+    }
     public function getHttpHeader($name, $default = null){
-        return $this->getServerParameter('HTTP_'.strtoupper(strtr($name, '-', '_')), $default);
+        return $this->getServerArg('HTTP_'.strtoupper(strtr($name, '-', '_')), $default);
     }
     public function getServerParameter($name, $default = null){
         if (func_num_args() > 2){
@@ -106,17 +131,22 @@ class yRequest{
      * @return string Domain name
      */
     public function getDomainName(){
-        $da = explode(".", $this->getServerName());
-        if (reset($da) == 'www'){
-            array_shift($da);
+        $n = $this->getServerName();
+        if (strpos($n, 'www.') === 0){
+            return substr($n, 4);
         }
-        return implode(".", $da);
+        return $n;
     }
     public function getReferer($default = false){
         return $this->getServerParameter('HTTP_REFERER', $default);
     }
     public function getUseragent($default = ''){
         return $this->getServerParameter('HTTP_USER_AGENT', $default);
+    }
+    public function getIp(){
+        // 1. REMOTE_ADDR - default
+        // 2. X-Forwarded-For - proxy
+        // 3. HTTP_X_FORWARDED_FOR - proxy 
     }
 }
 
