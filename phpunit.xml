@@ -1,11 +1,20 @@
 <phpunit>
   <testsuites>
     <testsuite name="yuki-testsuite" bootstrap="tests/bootstrap.php">
-      <directory>tests/src/file</directory>
+      <file>tests/src/file/yVirtualFileSystemTest.php</file>
       <file>tests/src/forms/yFileInputTest.php</file>
-      <directory>tests/src/html</directory>
-      <directory>tests/src/request</directory>
-      <directory>tests/src/uri</directory>
+      <file>tests/src/forms/yFormControlSetTest.php</file>
+      <file>tests/src/forms/yTextInputTest.php</file>
+      <file>tests/src/html/yHtmlAttributeTest.php</file>
+      <file>tests/src/html/yHtmlTagTest.php</file>
+      <file>tests/src/html/yTextNodeTest.php</file>
+      <file>tests/src/request/yRequestTest.php</file>
+      <file>tests/src/uri/yUriAuthorityTest.php</file>
+      <file>tests/src/uri/yUriFragmentTest.php</file>
+      <file>tests/src/uri/yUriPathTest.php</file>
+      <file>tests/src/uri/yUriQueryTest.php</file>
+      <file>tests/src/uri/yUriSchemeTest.php</file>
+      <file>tests/src/uri/yUriTest.php</file>
     </testsuite>
   </testsuites>
 </phpunit>
