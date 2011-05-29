@@ -1,11 +1,11 @@
 <phpunit>
   <testsuites>
-    <testsuite name="yuki-testsuite" bootstrap="./tests/bootstrap.php">
-      <directory>./tests/src/file</directory>
-      <directory>./tests/src/forms</directory>
-      <directory>./tests/src/html</directory>
-      <directory>./tests/src/request</directory>
-      <directory>./tests/src/uri</directory>
+    <testsuite name="yuki-testsuite" bootstrap="tests/bootstrap.php">
+      <directory>tests/src/file</directory>
+      <file>tests/src/forms/yFileInputTest.php</file>
+      <directory>tests/src/html</directory>
+      <directory>tests/src/request</directory>
+      <directory>tests/src/uri</directory>
     </testsuite>
   </testsuites>
 </phpunit>
