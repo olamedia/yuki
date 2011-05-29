@@ -1,6 +1,6 @@
 <phpunit>
   <testsuites>
-    <testsuite name="yuki">
+    <testsuite name="yuki-testsuite">
       <directory>tests/src/file</directory>
       <directory>tests/src/forms</directory>
       <directory>tests/src/html</directory>
