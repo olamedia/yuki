@@ -89,6 +89,22 @@ class yRegistry{
         ob_end_clean();
         throw new Exception('No such callable was registered: '.$dump);
     }
+    public function callResult($name){
+        if (is_object($name)){
+            $name = "$name";
+        }
+        if (array_key_exists($name, $this->_map)){
+            $callback = $this->_map[$name];
+            $args = func_get_args();
+            array_shift($args);
+            return $this->resultArray($callback, $args);
+        }
+        ob_start();
+        var_dump($name);
+        $dump = ob_get_contents();
+        ob_end_clean();
+        throw new Exception('No such callable was registered: '.$dump);
+    }
     public function result($callback){
         $args = func_get_args();
         array_shift($args);
@@ -102,10 +118,6 @@ class yRegistry{
             $name .= ':'.spl_object_hash($callback);
         }
         $hash = md5($name.serialize($args));
-        /* echo '<div style="padding: 3px;">callback='.$name.'; hash='.$hash.';';
-          var_dump($args);
-          debug_zval_dump($callback);
-          echo '</div>'; */
         if (!isset($this->_results[$hash])){
             $this->_results[$hash] = call_user_func_array($callback, $args);
         }

@@ -74,6 +74,18 @@ class yRegistryTest extends PHPUnit_Framework_TestCase{
                 });
         $this->assertEquals('result', $r->call($foo));
     }
+    public function testCallResult(){
+        $r = new yRegistry();
+        $foo = new yRegistryTestObject('foo');
+        $r->set($foo, function(){
+                    $x = '';
+                    $result = 'result'.$x;
+                    $x = '2';
+                    return $result;
+                });
+        $this->assertEquals('result', $r->callResult($foo)); 
+        // result must be calculated once (cached function result)
+    }
     /**
      * @expectedException Exception
      */
