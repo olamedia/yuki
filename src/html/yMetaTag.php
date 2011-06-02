@@ -23,7 +23,7 @@ class yMetaTag extends yHtmlTag{
         parent::__construct('meta', $attr, true);
     }
     public function setContent($content){
-        $this->set('content', $content);
+        $this->setAttribute('content', $content);
     }
     public function pushContent($content){
         $this->popContent($content);
