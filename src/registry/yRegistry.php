@@ -18,9 +18,27 @@
  * @author olamedia
  * @license http://www.opensource.org/licenses/mit-license.php MIT
  */
-class yRegistry{
+class yRegistry implements ArrayAccess, IteratorAggregate{
     protected $_map = array(); //'default'=>array('response', 'name')
     protected $_results = array();
+    public function offsetExists($offset){
+        return array_key_exists($offset, $this->_map);
+    }
+    public function offsetGet($offset){
+        return $this->get($offset);
+    }
+    public function offsetSet($offset, $value){
+        $this->set($offset, $value);
+    }
+    public function offsetUnset($offset){
+        $this->remove($offset);
+    }
+    public function getIterator(){
+        return new ArrayIterator($this->_map);
+    }
+    public function remove($name){
+        unset($this->_map[$name]);
+    }
     public function append($name, $value){
         if (is_object($name)){
             $name = "$name";
