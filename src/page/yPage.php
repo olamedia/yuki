@@ -283,8 +283,8 @@ class yPage{
             $head->appendChild($rel);
         }
         // DO NOT CHANGE: Put external scripts after external stylesheets if possible.
-        $head->appendChild($this->getStyleTag());
         $head->appendChild($this->getStylesheets());
+        $head->appendChild($this->getStyleTag());
         $head->appendChild($this->getScripts());
         //var_dump(yHtmlTag::create('meta', array('charset'=>$this->getCharset())));
         //return $head;
