@@ -21,8 +21,17 @@
 class yRegistry implements ArrayAccess, IteratorAggregate{
     protected $_map = array(); //'default'=>array('response', 'name')
     protected $_results = array();
+    /**
+     * Replaces registry data
+     * @param array $map
+     * @return yRegistry 
+     */
+    public function load($map){
+        $this->_map = $map;
+        return $this;
+    }
     public function offsetExists($offset){
-        return array_key_exists($offset, $this->_map);
+        return $this->has($offset);
     }
     public function offsetGet($offset){
         return $this->get($offset);
@@ -36,36 +45,53 @@ class yRegistry implements ArrayAccess, IteratorAggregate{
     public function getIterator(){
         return new ArrayIterator($this->_map);
     }
-    public function remove($name){
-        unset($this->_map[$name]);
+    public function __get($name){
+        return $this->get($name);
+    }
+    public function __set($name, $value){
+        $this->set($name, $value);
+    }
+    public function __isset($name){
+        return $this->has($name);
+    }
+    public function __unset($name){
+        $this->remove($name);
     }
     public function append($name, $value){
-        if (is_object($name)){
-            $name = "$name";
+        if (!is_string($name)){
+            $name = strval($name);
         }
         if (!isset($this->_map[$name]) || !is_string($this->_map[$name]))
             $this->_map[$name] = '';
         $this->_map[$name] .= $value;
     }
+    public function has($name){
+        if (!is_string($name)){
+            $name = strval($name);
+        }
+        return array_key_exists($name, $this->_map);
+    }
+    public function remove($name){
+        if (!is_string($name)){
+            $name = strval($name);
+        }
+        unset($this->_map[$name]);
+    }
     public function set($name, $value = null){
-        if (is_object($name)){
-            $name = "$name";
+        if (!is_string($name)){
+            $name = strval($name);
         }
-        if ($value === null){
-            unset($this->_map[$name]);
-        }else{
-            $this->_map[$name] = $value;
-        }
+        $this->_map[$name] = $value;
     }
     public function get($name, $default = null){
-        if (is_object($name)){
-            $name = "$name";
+        if (!is_string($name)){
+            $name = strval($name);
         }
         return isset($this->_map[$name])?$this->_map[$name]:$default;
     }
     public function push($name, $value = null){
-        if (is_object($name)){
-            $name = "$name";
+        if (!is_string($name)){
+            $name = strval($name);
         }
         if (!isset($this->_map[$name])){
             $this->_map[$name] = array();
@@ -77,8 +103,8 @@ class yRegistry implements ArrayAccess, IteratorAggregate{
         }
     }
     public function call($name, $default = null){
-        if (is_object($name)){
-            $name = "$name";
+        if (!is_string($name)){
+            $name = strval($name);
         }
         if ($default === null){
             $default = $this->get('default');
@@ -108,8 +134,8 @@ class yRegistry implements ArrayAccess, IteratorAggregate{
         throw new Exception('No such callable was registered: '.$dump);
     }
     public function callResult($name){
-        if (is_object($name)){
-            $name = "$name";
+        if (!is_string($name)){
+            $name = strval($name);
         }
         if (array_key_exists($name, $this->_map)){
             $callback = $this->_map[$name];
