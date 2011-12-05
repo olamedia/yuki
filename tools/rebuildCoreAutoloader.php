@@ -10,9 +10,12 @@
  * file that was distributed with this source code.
  */
 
+namespace yuki;
 
-require 'internalBootstrap.php';
+require_once 'internalBootstrap.php';
+\yCoreAutoloader::getInstance()->rebuild();
 
-
-yCoreAutoloader::getInstance()->rebuild();
+require_once dirname(__FILE__).'/../nsrc/autoload/autoloader.php';
+require_once dirname(__FILE__).'/../nsrc/autoload/coreAutoloader.php';
+\yuki\coreAutoloader::getInstance()->rebuild();
 

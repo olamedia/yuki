@@ -89,6 +89,9 @@ class yRegistry implements ArrayAccess, IteratorAggregate{
         }
         return isset($this->_map[$name])?$this->_map[$name]:$default;
     }
+    public function toArray(){
+        return $this->_map;
+    }
     public function push($name, $value = null){
         if (!is_string($name)){
             $name = strval($name);

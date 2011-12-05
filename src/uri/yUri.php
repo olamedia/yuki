@@ -40,12 +40,12 @@ class yUri{
      * @internal
      * @var yUriPath 
      */
-    protected $_path = null;
+    protected $_path = array();
     /**
      * @internal
      * @var yUriQuery 
      */
-    protected $_query = null;
+    protected $_query = array();
     /**
      * @internal
      * @var yUriFragment 
@@ -130,6 +130,16 @@ class yUri{
     public function getPath(){
         return $this->_path;
     }
+    public function setPath($path){
+        $this->_path = $path;
+        return $this;
+    }
+    public function rel($relativeUri){
+        $u = yUri::fromString(strval($relativeUri));
+        $rel = clone $this;
+        $rel->getPath()->appendSegments($u->getPath()->getSegments());
+        return $rel;
+    }
     /**
      * Makes relative uri if possible or return untouched
      * @param string $uri
@@ -154,11 +164,11 @@ class yUri{
      */
     public function __toString(){
         return (string)
-        $this->_scheme.
-        $this->_authority.
-        $this->_path.
-        $this->_query.
-        $this->_fragment;
+                $this->_scheme.
+                $this->_authority.
+                $this->_path.
+                $this->_query.
+                $this->_fragment;
     }
     public function __clone(){
         $this->_scheme = clone $this->_scheme;

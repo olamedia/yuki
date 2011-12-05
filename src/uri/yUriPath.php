@@ -26,6 +26,19 @@ class yUriPath{
     $_isAbsolute = false,
     $_segments = array(),
     $_isDir = false;
+    public function getSegments(){
+        return $this->_segments;
+    }
+    public function setSegments($segments){
+        $this->_segments = $segments;
+        return $this;
+    }
+    public function appendSegments($segments){
+        foreach ($segments as $segment){
+            $this->_segments[] = $segment;
+        }
+        return $this;
+    }
     public function setAbsolute($absolute = true){
         $this->_isAbsolute = $absolute;
     }
@@ -61,9 +74,9 @@ class yUriPath{
     }
     public function __toString(){
         return (string)
-        ($this->_isAbsolute?'/':'').
-        implode('/', $this->_segments).
-        (($this->_isDir && count($this->_segments))?'/':'');
+                ($this->_isAbsolute?'/':'').
+                implode('/', $this->_segments).
+                (($this->_isDir && count($this->_segments))?'/':'');
     }
 }
 

@@ -1,0 +1,46 @@
+
+    Patterns:
+        DI/ServiceLocator
+        registry
+        behaviours
+        events
+        MVC/MVC:
+            model (ORM)
+            view (?templates)
+            controller
+
+    Helpers:
+        autoloader
+        request, response
+        URI
+        router
+        forms (+validators)
+        mail
+        debugging, profiling
+        page context (title, meta, breadcrumbs etc)
+        console
+        i18n l10n
+        files
+        assets
+        ip/domain utility
+        process utility (fork, libevent)
+        media utility (images processing, flash, video)
+
+
+
+
+    MISC:
+        html parser
+        jabber/irc/skype etc
+        geometry
+        cart/money
+        self-documentation
+        html creation
+    
+    
+    
+
+
+
+
+

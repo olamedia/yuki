@@ -1,7 +1,5 @@
 <?php
 
-require_once dirname(__FILE__).'/../../../src/registry/yRegistry.php';
-
 class yRegistryTestObject{
     protected $_s = '';
     public function __construct($s){
@@ -83,7 +81,7 @@ class yRegistryTest extends PHPUnit_Framework_TestCase{
                     $x = '2';
                     return $result;
                 });
-        $this->assertEquals('result', $r->callResult($foo)); 
+        $this->assertEquals('result', $r->callResult($foo));
         // result must be calculated once (cached function result)
     }
     /**

@@ -1,0 +1,181 @@
+<html>
+<head>
+<meta charset="utf-8" />
+<link type="text/css" rel="stylesheet" href="style.css" />
+<link href="http://alexgorbatchev.com/pub/sh/current/styles/shCore.css" rel="stylesheet" type="text/css" />
+<link href="http://alexgorbatchev.com/pub/sh/current/styles/shThemeRDark.css" rel="stylesheet" type="text/css" />
+<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js" type="text/javascript"></script>
+<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shAutoloader.js" type="text/javascript"></script>
+<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushPhp.js" type="text/javascript"></script>
+<script type="text/javascript">
+SyntaxHighlighter.all();
+</script>
+</head>
+<body>
+<div class="header" style="border-top: 1px solid #C9D7F1;margin: 9px;margin-top: 24px;padding-top: 5px;margin-bottom: 10px;">
+    <a href="http://code.google.com/p/yuki/"><img src="http://code.google.com/p/yuki/logo?cct=1297980533" /></a>
+    <div style="display: inline-block;padding-left: 11px;">
+        <div class="project-name">
+            <a style="text-decoration: none;color: #666;font-family: arial, sans-serif;font-size: 39px;" href="http://code.google.com/p/yuki/">yuki</a>
+        </div>
+        <div class="project-summary">
+            <a href="http://code.google.com/p/yuki/" style="text-decoration: none;color: #444;font-family: arial, sans-serif;font-size: 13px;">Yuki PHP Framework</a>
+        </div>
+    </div>
+</div>
+<table width="100%"><tr><td width="200" valign="top">
+<div class="sidebar"><ul><li class="package">yuki<ul><li class="subpackage">autoload<ul><li class="class"><a href="yAutoloader.html">yAutoloader</a></li><li class="class"><a href="yCoreAutoloader.html">yCoreAutoloader</a></li></ul></li><li class="subpackage">breadcrumb<ul><li class="class"><a href="yBreadCrumbSet.html">yBreadCrumbSet</a></li></ul></li><li class="subpackage">debug<ul><li class="class"><a href="yDebugger.html">yDebugger</a></li></ul></li><li class="subpackage">file<ul><li class="class"><a href="yDirectory.html">yDirectory</a></li><li class="class"><a href="yFile.html">yFile</a></li><li class="class"><a href="yFileSystem.html">yFileSystem</a></li><li class="class"><a href="yFilesystemResource.html">yFilesystemResource</a></li><li class="class"><a href="yLocalFileSystem.html">yLocalFileSystem</a></li><li class="class"><a href="yVirtualFileSystem.html">yVirtualFileSystem</a></li></ul></li><li class="subpackage">doc<ul><li class="class"><a href="yDocBlock.html">yDocBlock</a></li><li class="class"><a href="yDocumentor.html">yDocumentor</a></li><li class="class"><a href="yMethodDocumentor.html">yMethodDocumentor</a></li></ul></li><li class="subpackage">forms<ul><li class="class"><a href="yFileInput.html">yFileInput</a></li><li class="class"><a href="yFormControl.html">yFormControl</a></li><li class="class"><a href="yFormControlSet.html">yFormControlSet</a></li><li class="class"><a href="yFormResultIterator.html">yFormResultIterator</a></li><li class="class"><a href="yTextInput.html">yTextInput</a></li><li class="class"><a href="yValidatorException.html">yValidatorException</a></li></ul></li><li class="subpackage">html<ul><li class="class"><a href="yHeadTag.html">yHeadTag</a></li><li class="class"><a href="yHtmlAttribute.html">yHtmlAttribute</a></li><li class="class"><a href="yHtmlHelper.html">yHtmlHelper</a></li><li class="class"><a href="yHtmlTag.html">yHtmlTag</a></li><li class="class"><a href="yHtmlTagList.html">yHtmlTagList</a></li><li class="class"><a href="yJsCommentNode.html">yJsCommentNode</a></li><li class="class"><a href="yMetaTag.html">yMetaTag</a></li><li class="class"><a href="yStyleTag.html">yStyleTag</a></li><li class="class"><a href="yTextNode.html">yTextNode</a></li></ul></li><li class="subpackage">page<ul><li class="class"><a href="yPage.html">yPage</a></li><li class="class"><a href="yPageMetaCollection.html">yPageMetaCollection</a></li></ul></li><li class="subpackage">registry<ul><li class="class"><a href="yRegistry.html">yRegistry</a></li></ul></li><li class="subpackage">request<ul><li class="class"><a href="yRequest.html">yRequest</a></li></ul></li><li class="subpackage">uri<ul><li class="class"><a href="yUri.html">yUri</a></li><li class="class"><a href="yUriAuthority.html">yUriAuthority</a></li><li class="class"><a href="yUriFragment.html">yUriFragment</a></li><li class="class"><a href="yUriPath.html">yUriPath</a></li><li class="class"><a href="yUriQuery.html">yUriQuery</a></li><li class="class"><a href="yUriScheme.html">yUriScheme</a></li></ul></li></ul></li><li class="package">Expression</li><li class="package">default</li></ul></div>            
+</td><td valign="top">
+            
+<h1>yRequest</h1>
+<div><b>@package</b> yuki</div>
+<div><b>@subpackage</b> request</div>
+
+<!-- Hierarhy -->
+
+<h2>Introduction</h2>
+yRequest<br />
+
+
+
+<h2>Method Summary</h2>
+<div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.setGetArray">setGetArray</a>(<span class="param">$array</span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.setPostArray">setPostArray</a>(<span class="param">$array, $link = 1</span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.setServerArray">setServerArray</a>(<span class="param">$array</span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method">static <a href="#method.fromEnvironment">fromEnvironment</a>(<span class="param"></span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.isCli">isCli</a>(<span class="param"></span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.getGetArg">getGetArg</a>(<span class="param">$name, $default = </span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.getPostArg">getPostArg</a>(<span class="param">$name, $default = </span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.getServerArg">getServerArg</a>(<span class="param">$name, $default = </span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.getArg">getArg</a>(<span class="param">$name, $default = </span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.getHttpHeader">getHttpHeader</a>(<span class="param">$name, $default = </span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.getServerParameter">getServerParameter</a>(<span class="param">$name, $default = </span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.getMethod">getMethod</a>(<span class="param">$default = </span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.isGet">isGet</a>(<span class="param"></span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.isPost">isPost</a>(<span class="param"></span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.isPut">isPut</a>(<span class="param"></span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.isDelete">isDelete</a>(<span class="param"></span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.isAjax">isAjax</a>(<span class="param"></span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.getRequestUriString">getRequestUriString</a>(<span class="param">$default = ""</span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method">string <a href="#method.getServerName">getServerName</a>(<span class="param">$default = ""</span>);</div><div style="font-size: 11px; margin-top: 1em;">Get domain name</div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method">string <a href="#method.getDomainName">getDomainName</a>(<span class="param"></span>);</div><div style="font-size: 11px; margin-top: 1em;">Get domain name, !excluding www. prefix</div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.getReferer">getReferer</a>(<span class="param">$default = </span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.getUseragent">getUseragent</a>(<span class="param">$default = ""</span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.getIp">getIp</a>(<span class="param">$default = ""</span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div>
+<h2>Method Details</h2>
+<div style="padding: 4px;border: solid 1px #666;"><a name="method.setGetArray"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.setGetArray">setGetArray</a>(<span class="param">$array</span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function setGetArray($array){
+        $this-&gt;_get = $array;
+        return $this;
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.setPostArray"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.setPostArray">setPostArray</a>(<span class="param">$array, $link = 1</span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function setPostArray(&amp;$array, $link = true){
+        if ($link){
+            $this-&gt;_post = &amp;$array;
+        }else{
+            unset($this-&gt;_post); // !! remove reference
+            $this-&gt;_post = $array; //array_diff_assoc($array, array());
+        }
+        return $this;
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.setServerArray"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.setServerArray">setServerArray</a>(<span class="param">$array</span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function setServerArray($array){
+        $this-&gt;_server = $array;
+        return $this;
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.fromEnvironment"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method">static <a href="#method.fromEnvironment">fromEnvironment</a>(<span class="param"></span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public static function fromEnvironment(){
+        $request = new yRequest();
+        $request
+                -&gt;setGetArray($_GET)
+                -&gt;setPostArray($_POST)
+                -&gt;setServerArray($_SERVER)
+        ;
+        return $request;
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.isCli"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.isCli">isCli</a>(<span class="param"></span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function isCli(){
+        return (PHP_SAPI == 'cli');
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.getGetArg"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.getGetArg">getGetArg</a>(<span class="param">$name, $default = </span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function getGetArg($name, $default = null){
+        return array_key_exists($name, $this-&gt;_get)?$this-&gt;_get[$name]:$default;
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.getPostArg"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.getPostArg">getPostArg</a>(<span class="param">$name, $default = </span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function getPostArg($name, $default = null){
+        return array_key_exists($name, $this-&gt;_post)?$this-&gt;_post[$name]:$default;
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.getServerArg"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.getServerArg">getServerArg</a>(<span class="param">$name, $default = </span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function getServerArg($name, $default = null){
+        return array_key_exists($name, $this-&gt;_server)?$this-&gt;_server[$name]:$default;
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.getArg"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.getArg">getArg</a>(<span class="param">$name, $default = </span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function getArg($name, $default = null){
+        $post = $this-&gt;getPostArg($name, null);
+        if ($post !== null){
+            return $post;
+        }
+        $get = $this-&gt;getGetArg($name, null);
+        if ($get !== null){
+            return $get;
+        }
+        return $default;
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.getHttpHeader"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.getHttpHeader">getHttpHeader</a>(<span class="param">$name, $default = </span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function getHttpHeader($name, $default = null){
+        return $this-&gt;getServerArg('HTTP_'.strtoupper(strtr($name, '-', '_')), $default);
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.getServerParameter"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.getServerParameter">getServerParameter</a>(<span class="param">$name, $default = </span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function getServerParameter($name, $default = null){
+        if (func_num_args() &gt; 2){
+            // simplify multiple keys checking
+            // Note: $default is required!
+            // example getServerParameter('DOCUMENT_URI', 'REQUEST_URI', '');
+            $args = func_get_args();
+            $default = array_pop($args);
+            foreach ($args as $name){
+                if (isset($this-&gt;_server[$name])){
+                    return $this-&gt;_server[$name];
+                }
+            }
+            return $default;
+        }
+        return isset($this-&gt;_server[$name])?$this-&gt;_server[$name]:$default;
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.getMethod"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.getMethod">getMethod</a>(<span class="param">$default = </span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function getMethod($default = null){
+        return $this-&gt;getServerParameter('REQUEST_METHOD', $default);
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.isGet"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.isGet">isGet</a>(<span class="param"></span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function isGet(){
+        return $this-&gt;getMethod() == 'GET';
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.isPost"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.isPost">isPost</a>(<span class="param"></span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function isPost(){
+        return $this-&gt;getMethod() == 'POST';
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.isPut"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.isPut">isPut</a>(<span class="param"></span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function isPut(){
+        return $this-&gt;getMethod() == 'PUT';
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.isDelete"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.isDelete">isDelete</a>(<span class="param"></span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function isDelete(){
+        return $this-&gt;getMethod() == 'DELETE';
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.isAjax"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.isAjax">isAjax</a>(<span class="param"></span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function isAjax(){
+        return 'XMLHttpRequest' == $this-&gt;getHttpHeader('X-Requested-With');
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.getRequestUriString"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.getRequestUriString">getRequestUriString</a>(<span class="param">$default = ""</span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function getRequestUriString($default = ''){
+        return $this-&gt;getServerParameter(
+                        'DOCUMENT_URI', // nginx SSI REQUEST_URI = /
+                        'REQUEST_URI', // common key
+                        $default
+        );
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.getServerName"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method">string <a href="#method.getServerName">getServerName</a>(<span class="param">$default = ""</span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3>Get domain name</h3></div></div><div><b>returns</b> string </div></div></div><h3>Source Code</h3><pre class="brush: php">    public function getServerName($default = ''){
+        return $this-&gt;getServerParameter(
+                        'HTTP_HOST', // From Host: HTTP header
+                        'SERVER_NAME', // From server_name directive
+                        $default
+        );
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.getDomainName"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method">string <a href="#method.getDomainName">getDomainName</a>(<span class="param"></span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3>Get domain name, !excluding www. prefix</h3></div></div><div><b>returns</b> string </div></div></div><h3>Source Code</h3><pre class="brush: php">    public function getDomainName(){
+        $n = $this-&gt;getServerName();
+        if (strpos($n, 'www.') === 0){
+            return substr($n, 4);
+        }
+        return $n;
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.getReferer"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.getReferer">getReferer</a>(<span class="param">$default = </span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function getReferer($default = false){
+        return $this-&gt;getServerParameter('HTTP_REFERER', $default);
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.getUseragent"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.getUseragent">getUseragent</a>(<span class="param">$default = ""</span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function getUseragent($default = ''){
+        return $this-&gt;getServerParameter('HTTP_USER_AGENT', $default);
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.getIp"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.getIp">getIp</a>(<span class="param">$default = ""</span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function getIp($default = ''){
+        // 1. REMOTE_ADDR - default
+        // 2. X-Forwarded-For - proxy
+        // 3. HTTP_X_FORWARDED_FOR - proxy 
+        return $this-&gt;getServerParameter('HTTP_X_FORWARDED_FOR', 'REMOTE_ADDR', $default);
+    }
+</pre></div>
+
+
+<h2>Class synopsis</h2>
+<div class="classsynopsis">
+<b class="classname">yRequest</b> {
+<div class="contents">
+<h3>/* Properties */</h3>
+<div class="property">protected <a href="#property._get">$_get</a>;</div><div class="property">protected <a href="#property._post">$_post</a>;</div><div class="property">protected <a href="#property._server">$_server</a>;</div>
+<h3>/* Methods */</h3>
+<div class="method"><a href="#method.setGetArray">setGetArray</a>(<span class="param">$array</span>);</div><div class="method"><a href="#method.setPostArray">setPostArray</a>(<span class="param">$array, $link = 1</span>);</div><div class="method"><a href="#method.setServerArray">setServerArray</a>(<span class="param">$array</span>);</div><div class="method">static <a href="#method.fromEnvironment">fromEnvironment</a>(<span class="param"></span>);</div><div class="method"><a href="#method.isCli">isCli</a>(<span class="param"></span>);</div><div class="method"><a href="#method.getGetArg">getGetArg</a>(<span class="param">$name, $default = </span>);</div><div class="method"><a href="#method.getPostArg">getPostArg</a>(<span class="param">$name, $default = </span>);</div><div class="method"><a href="#method.getServerArg">getServerArg</a>(<span class="param">$name, $default = </span>);</div><div class="method"><a href="#method.getArg">getArg</a>(<span class="param">$name, $default = </span>);</div><div class="method"><a href="#method.getHttpHeader">getHttpHeader</a>(<span class="param">$name, $default = </span>);</div><div class="method"><a href="#method.getServerParameter">getServerParameter</a>(<span class="param">$name, $default = </span>);</div><div class="method"><a href="#method.getMethod">getMethod</a>(<span class="param">$default = </span>);</div><div class="method"><a href="#method.isGet">isGet</a>(<span class="param"></span>);</div><div class="method"><a href="#method.isPost">isPost</a>(<span class="param"></span>);</div><div class="method"><a href="#method.isPut">isPut</a>(<span class="param"></span>);</div><div class="method"><a href="#method.isDelete">isDelete</a>(<span class="param"></span>);</div><div class="method"><a href="#method.isAjax">isAjax</a>(<span class="param"></span>);</div><div class="method"><a href="#method.getRequestUriString">getRequestUriString</a>(<span class="param">$default = ""</span>);</div><div class="method">string <a href="#method.getServerName">getServerName</a>(<span class="param">$default = ""</span>);</div><div class="method">string <a href="#method.getDomainName">getDomainName</a>(<span class="param"></span>);</div><div class="method"><a href="#method.getReferer">getReferer</a>(<span class="param">$default = </span>);</div><div class="method"><a href="#method.getUseragent">getUseragent</a>(<span class="param">$default = ""</span>);</div><div class="method"><a href="#method.getIp">getIp</a>(<span class="param">$default = ""</span>);</div>
+</div>
+}
+</div>
+
+
+</td></tr></table>
+</body>
+</html>

@@ -16,3 +16,8 @@ require_once dirname(__FILE__).'/../src/autoload/yCoreAutoloader.php';
 date_default_timezone_set('Asia/Yekaterinburg');
 
 spl_autoload_register(array(yCoreAutoloader::getInstance(), 'autoload'));
+
+require_once dirname(__FILE__).'/../nsrc/console/console.php';
+require_once dirname(__FILE__).'/../nsrc/autoload/autoloader.php';
+require_once dirname(__FILE__).'/../nsrc/autoload/coreAutoloader.php';
+\spl_autoload_register(array(yuki\coreAutoloader::getInstance(), 'autoload'));

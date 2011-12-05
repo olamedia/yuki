@@ -22,16 +22,22 @@ class yTrackingRegistry extends yRegistry{
     protected $_changed = false;
     protected $_changesMap = array();
     public function set($name, $value = null){
-        if (is_object($name)){
-            $name = "$name";
+        if (!is_string($name)){
+            $name = strval($name);
         }
         if (array_key_exists($name, $this->_map)){
             if ($this->_map[$name] !== $value){
                 $this->_changed = true;
                 $this->_changesMap[$name] = true;
             }
+        }else{
+            $this->_changed = true;
+            $this->_changesMap[$name] = true;
         }
         $this->_map[$name] = $value;
+    }
+    public function isChanged(){
+        return $this->_changed;
     }
     public function markUnchanged(){
         $this->_changed = false;

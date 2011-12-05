@@ -41,6 +41,7 @@ class yRequest{
     }
     public static function fromEnvironment(){
         $request = new yRequest();
+        // $_SERVER['REQUEST_QUERY_STRING'] - Apache's 404 error handler
         $request
                 ->setGetArray($_GET)
                 ->setPostArray($_POST)

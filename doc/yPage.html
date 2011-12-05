@@ -1,0 +1,320 @@
+<html>
+<head>
+<meta charset="utf-8" />
+<link type="text/css" rel="stylesheet" href="style.css" />
+<link href="http://alexgorbatchev.com/pub/sh/current/styles/shCore.css" rel="stylesheet" type="text/css" />
+<link href="http://alexgorbatchev.com/pub/sh/current/styles/shThemeRDark.css" rel="stylesheet" type="text/css" />
+<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js" type="text/javascript"></script>
+<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shAutoloader.js" type="text/javascript"></script>
+<script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushPhp.js" type="text/javascript"></script>
+<script type="text/javascript">
+SyntaxHighlighter.all();
+</script>
+</head>
+<body>
+<div class="header" style="border-top: 1px solid #C9D7F1;margin: 9px;margin-top: 24px;padding-top: 5px;margin-bottom: 10px;">
+    <a href="http://code.google.com/p/yuki/"><img src="http://code.google.com/p/yuki/logo?cct=1297980533" /></a>
+    <div style="display: inline-block;padding-left: 11px;">
+        <div class="project-name">
+            <a style="text-decoration: none;color: #666;font-family: arial, sans-serif;font-size: 39px;" href="http://code.google.com/p/yuki/">yuki</a>
+        </div>
+        <div class="project-summary">
+            <a href="http://code.google.com/p/yuki/" style="text-decoration: none;color: #444;font-family: arial, sans-serif;font-size: 13px;">Yuki PHP Framework</a>
+        </div>
+    </div>
+</div>
+<table width="100%"><tr><td width="200" valign="top">
+<div class="sidebar"><ul><li class="package">yuki<ul><li class="subpackage">autoload<ul><li class="class"><a href="yAutoloader.html">yAutoloader</a></li><li class="class"><a href="yCoreAutoloader.html">yCoreAutoloader</a></li></ul></li><li class="subpackage">breadcrumb<ul><li class="class"><a href="yBreadCrumbSet.html">yBreadCrumbSet</a></li></ul></li><li class="subpackage">debug<ul><li class="class"><a href="yDebugger.html">yDebugger</a></li></ul></li><li class="subpackage">file<ul><li class="class"><a href="yDirectory.html">yDirectory</a></li><li class="class"><a href="yFile.html">yFile</a></li><li class="class"><a href="yFileSystem.html">yFileSystem</a></li><li class="class"><a href="yFilesystemResource.html">yFilesystemResource</a></li><li class="class"><a href="yLocalFileSystem.html">yLocalFileSystem</a></li><li class="class"><a href="yVirtualFileSystem.html">yVirtualFileSystem</a></li></ul></li><li class="subpackage">doc<ul><li class="class"><a href="yDocBlock.html">yDocBlock</a></li><li class="class"><a href="yDocumentor.html">yDocumentor</a></li><li class="class"><a href="yMethodDocumentor.html">yMethodDocumentor</a></li></ul></li><li class="subpackage">forms<ul><li class="class"><a href="yFileInput.html">yFileInput</a></li><li class="class"><a href="yFormControl.html">yFormControl</a></li><li class="class"><a href="yFormControlSet.html">yFormControlSet</a></li><li class="class"><a href="yFormResultIterator.html">yFormResultIterator</a></li><li class="class"><a href="yTextInput.html">yTextInput</a></li><li class="class"><a href="yValidatorException.html">yValidatorException</a></li></ul></li><li class="subpackage">html<ul><li class="class"><a href="yHeadTag.html">yHeadTag</a></li><li class="class"><a href="yHtmlAttribute.html">yHtmlAttribute</a></li><li class="class"><a href="yHtmlHelper.html">yHtmlHelper</a></li><li class="class"><a href="yHtmlTag.html">yHtmlTag</a></li><li class="class"><a href="yHtmlTagList.html">yHtmlTagList</a></li><li class="class"><a href="yJsCommentNode.html">yJsCommentNode</a></li><li class="class"><a href="yMetaTag.html">yMetaTag</a></li><li class="class"><a href="yStyleTag.html">yStyleTag</a></li><li class="class"><a href="yTextNode.html">yTextNode</a></li></ul></li><li class="subpackage">page<ul><li class="class"><a href="yPage.html">yPage</a></li><li class="class"><a href="yPageMetaCollection.html">yPageMetaCollection</a></li></ul></li><li class="subpackage">registry<ul><li class="class"><a href="yRegistry.html">yRegistry</a></li></ul></li><li class="subpackage">request<ul><li class="class"><a href="yRequest.html">yRequest</a></li></ul></li><li class="subpackage">uri<ul><li class="class"><a href="yUri.html">yUri</a></li><li class="class"><a href="yUriAuthority.html">yUriAuthority</a></li><li class="class"><a href="yUriFragment.html">yUriFragment</a></li><li class="class"><a href="yUriPath.html">yUriPath</a></li><li class="class"><a href="yUriQuery.html">yUriQuery</a></li><li class="class"><a href="yUriScheme.html">yUriScheme</a></li></ul></li></ul></li><li class="package">Expression</li><li class="package">default</li></ul></div>            
+</td><td valign="top">
+            
+<h1>yPage</h1>
+<div><b>@package</b> yuki</div>
+<div><b>@subpackage</b> page</div>
+
+<!-- Hierarhy -->
+
+<h2>Introduction</h2>
+yPage<br />
+<br />
+
+
+<h2>Method Summary</h2>
+<div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.__construct">__construct</a>(<span class="param"></span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.getTitle">getTitle</a>(<span class="param"></span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.setTitle">setTitle</a>(<span class="param">$title</span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.getDescription">getDescription</a>(<span class="param"></span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.setDescription">setDescription</a>(<span class="param">$description</span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.index">index</a>(<span class="param"></span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.noIndex">noIndex</a>(<span class="param"></span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.follow">follow</a>(<span class="param"></span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.noFollow">noFollow</a>(<span class="param"></span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.archive">archive</a>(<span class="param"></span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.noArchive">noArchive</a>(<span class="param"></span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.getLanguage">getLanguage</a>(<span class="param"></span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.setLanguage">setLanguage</a>(<span class="param">$language</span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.getCharset">getCharset</a>(<span class="param"></span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.setCharset">setCharset</a>(<span class="param">$charset</span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.setMeta">setMeta</a>(<span class="param">$name, $content, $isHttp = </span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.addRelation">addRelation</a>(<span class="param">$rel, $href, $attr = Array</span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.setHome">setHome</a>(<span class="param">$href</span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.setIndex">setIndex</a>(<span class="param">$href</span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.setFirst">setFirst</a>(<span class="param">$href</span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.setLast">setLast</a>(<span class="param">$href</span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.setNext">setNext</a>(<span class="param">$href</span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.setPrev">setPrev</a>(<span class="param">$href</span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.setHelp">setHelp</a>(<span class="param">$href</span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.setGlossary">setGlossary</a>(<span class="param">$href</span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.setCopyright">setCopyright</a>(<span class="param">$href</span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.setHttp">setHttp</a>(<span class="param">$name, $content</span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.setGeoCountry">setGeoCountry</a>(<span class="param">$code, $name</span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.setGeoLocation">setGeoLocation</a>(<span class="param">$name</span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.setGeoRegion">setGeoRegion</a>(<span class="param">$name</span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.setGeoPosition">setGeoPosition</a>(<span class="param">$lat, $lng</span>);</div><div style="font-size: 11px; margin-top: 1em;">Sets the following meta tags:</div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.requireCss">requireCss</a>(<span class="param">$uri</span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.getStylesheets">getStylesheets</a>(<span class="param"></span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.getScripts">getScripts</a>(<span class="param"></span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.requireJs">requireJs</a>(<span class="param">$uri</span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.css">css</a>(<span class="param">$cssString</span>);</div><div style="font-size: 11px; margin-top: 1em;">Small subsets of css can be included directly into the HTML document.</div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.js">js</a>(<span class="param">$jsString</span>);</div><div style="font-size: 11px; margin-top: 1em;">Small subsets of javscript can be included directly into the HTML document.</div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.getStyleTag">getStyleTag</a>(<span class="param"></span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.getScriptTag">getScriptTag</a>(<span class="param"></span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.getHtmlStart">getHtmlStart</a>(<span class="param"></span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div><div class="summary" style="padding-bottom: 5px;margin-bottom: 5px;border-bottom: 1px solid #AAA;"><div class="method"><a href="#method.getHead">getHead</a>(<span class="param"></span>);</div><div style="font-size: 11px; margin-top: 1em;"></div></div>
+<h2>Method Details</h2>
+<div style="padding: 4px;border: solid 1px #666;"><a name="method.__construct"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.__construct">__construct</a>(<span class="param"></span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function __construct(){
+        $this-&gt;_registry = new yRegistry();
+        $this-&gt;_meta = new yPageMetaCollection();
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.getTitle"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.getTitle">getTitle</a>(<span class="param"></span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function getTitle(){
+        return $this-&gt;_registry-&gt;get('content/title', '');
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.setTitle"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.setTitle">setTitle</a>(<span class="param">$title</span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function setTitle($title){
+        $this-&gt;_registry-&gt;set('content/title', $title);
+        return $this;
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.getDescription"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.getDescription">getDescription</a>(<span class="param"></span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function getDescription(){
+        return $this-&gt;_registry-&gt;get('content/description', '');
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.setDescription"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.setDescription">setDescription</a>(<span class="param">$description</span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function setDescription($description){
+        $this-&gt;_registry-&gt;set('content/description', $description);
+        return $this;
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.index"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.index">index</a>(<span class="param"></span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function index(){
+        $this-&gt;_meta-&gt;replace('robots', 'noindex', 'index');
+        return $this;
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.noIndex"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.noIndex">noIndex</a>(<span class="param"></span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function noIndex(){
+        $this-&gt;_meta-&gt;replace('robots', 'index', 'noindex');
+        return $this;
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.follow"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.follow">follow</a>(<span class="param"></span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function follow(){
+        $this-&gt;_meta-&gt;replace('robots', 'nofollow', 'follow');
+        return $this;
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.noFollow"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.noFollow">noFollow</a>(<span class="param"></span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function noFollow(){
+        $this-&gt;_meta-&gt;replace('robots', 'follow', 'nofollow');
+        return $this;
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.archive"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.archive">archive</a>(<span class="param"></span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function archive(){
+        $this-&gt;_meta-&gt;replace('robots', 'noarchive', 'archive');
+        return $this;
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.noArchive"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.noArchive">noArchive</a>(<span class="param"></span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function noArchive(){
+        $this-&gt;_meta-&gt;replace('robots', 'archive', 'noarchive');
+        return $this;
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.getLanguage"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.getLanguage">getLanguage</a>(<span class="param"></span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function getLanguage(){
+        return $this-&gt;_registry-&gt;get('content/language', 'en');
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.setLanguage"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.setLanguage">setLanguage</a>(<span class="param">$language</span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function setLanguage($language){
+        $this-&gt;_registry-&gt;set('content/language', $language);
+        //$this-&gt;setHttp('Content-Language', $language);
+        //$this-&gt;setMeta('language', $language);
+        return $this;
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.getCharset"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.getCharset">getCharset</a>(<span class="param"></span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function getCharset(){
+        return $this-&gt;_registry-&gt;get('content/charset', 'UTF-8');
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.setCharset"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.setCharset">setCharset</a>(<span class="param">$charset</span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function setCharset($charset){
+        $this-&gt;_registry-&gt;set('content/charset', $charset);
+        return $this;
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.setMeta"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.setMeta">setMeta</a>(<span class="param">$name, $content, $isHttp = </span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function setMeta($name, $content, $isHttp = false){
+        $this-&gt;_meta-&gt;set($name, $content, $isHttp);
+        return $this;
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.addRelation"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.addRelation">addRelation</a>(<span class="param">$rel, $href, $attr = Array</span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function addRelation($rel, $href, $attr = array()){
+        $attr['rel'] = $rel;
+        $attr['href'] = $href;
+        $this-&gt;_relations[$rel] = new yHtmlTag('link', $attr, true);
+        return $this;
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.setHome"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.setHome">setHome</a>(<span class="param">$href</span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function setHome($href){
+        $this-&gt;addRelation('Home', $href);
+        return $this;
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.setIndex"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.setIndex">setIndex</a>(<span class="param">$href</span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function setIndex($href){
+        $this-&gt;addRelation('Index', $href);
+        return $this;
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.setFirst"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.setFirst">setFirst</a>(<span class="param">$href</span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function setFirst($href){
+        $this-&gt;addRelation('First', $href);
+        return $this;
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.setLast"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.setLast">setLast</a>(<span class="param">$href</span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function setLast($href){
+        $this-&gt;addRelation('Last', $href);
+        return $this;
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.setNext"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.setNext">setNext</a>(<span class="param">$href</span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function setNext($href){
+        $this-&gt;addRelation('Next', $href);
+        return $this;
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.setPrev"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.setPrev">setPrev</a>(<span class="param">$href</span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function setPrev($href){
+        $this-&gt;addRelation('Prev', $href);
+        return $this;
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.setHelp"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.setHelp">setHelp</a>(<span class="param">$href</span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function setHelp($href){
+        $this-&gt;addRelation('Help', $href);
+        return $this;
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.setGlossary"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.setGlossary">setGlossary</a>(<span class="param">$href</span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function setGlossary($href){
+        $this-&gt;addRelation('Glossary', $href);
+        return $this;
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.setCopyright"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.setCopyright">setCopyright</a>(<span class="param">$href</span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function setCopyright($href){
+        $this-&gt;addRelation('Copyright', $href);
+        return $this;
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.setHttp"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.setHttp">setHttp</a>(<span class="param">$name, $content</span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function setHttp($name, $content){
+        $this-&gt;_meta-&gt;set($name, $content, true);
+        return $this;
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.setGeoCountry"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.setGeoCountry">setGeoCountry</a>(<span class="param">$code, $name</span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div><b style="color: #683B00;">$code</b> (type) ISO 3166-1 alpha-2 for countries and territories
+</div><div><b style="color: #683B00;">$name</b> (type) 
+</div><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3>
+</h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function setGeoCountry($code, $name){
+        $this-&gt;_registry-&gt;set('content/geo/country-code', $code);
+        $this-&gt;_registry-&gt;set('content/geo/country', $name);
+        $this-&gt;_updateGeoRegion();
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.setGeoLocation"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.setGeoLocation">setGeoLocation</a>(<span class="param">$name</span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function setGeoLocation($name){
+        $this-&gt;_registry-&gt;set('content/geo/placename', $name);
+        $this-&gt;_updateGeoRegion();
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.setGeoRegion"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.setGeoRegion">setGeoRegion</a>(<span class="param">$name</span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function setGeoRegion($name){
+        $this-&gt;_registry-&gt;set('content/geo/region', $name);
+        $this-&gt;_updateGeoRegion();
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method._updateGeoRegion"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method">protected <a href="#method._updateGeoRegion">_updateGeoRegion</a>(<span class="param"></span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    protected function _updateGeoRegion(){
+        $countryCode = $this-&gt;_registry-&gt;get('content/geo/country-code', false);
+        $country = $this-&gt;_registry-&gt;get('content/geo/country', false);
+        $region = $this-&gt;_registry-&gt;get('content/geo/region', false);
+        $location = $this-&gt;_registry-&gt;get('content/geo/location', false);
+        //&lt;meta name=&quot;geo.region&quot; content=&quot;RU-город Москва&quot; /&gt;
+        if ($countryCode &amp;&amp; $region){
+            $this-&gt;setMeta('geo.region', $countryCode.'-'.$region);
+        }
+        //&lt;meta name=&quot;geo.placename&quot; content=&quot;город Москва, Россия&quot; /&gt;
+        if ($country &amp;&amp; $location){
+            $this-&gt;setMeta('geo.placename', $location.', '.$country);
+        }
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.setGeoPosition"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.setGeoPosition">setGeoPosition</a>(<span class="param">$lat, $lng</span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div><b style="color: #683B00;">$lat
+</b> (type) </div><div><b style="color: #683B00;">$lng</b> (type) 
+</div><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3>Sets the following meta tags:
+</h3></div><meta name="geo.position" content="55.755786;37.617633" />
+<br /><meta name="ICBM" content="55.755786, 37.617633" />
+</div></div></div><h3>Source Code</h3><pre class="brush: php">    public function setGeoPosition($lat, $lng){
+        $this-&gt;_registry-&gt;set('content/geo/lat', $lat);
+        $this-&gt;_registry-&gt;set('content/geo/lng', $lng);
+        $this-&gt;setMeta('geo.position', $lat.';'.$lng);
+        $this-&gt;setMeta('ICBM', $lat.', '.$lng);
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.requireCss"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.requireCss">requireCss</a>(<span class="param">$uri</span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function requireCss($uri){
+        $this-&gt;_registry-&gt;push('css/include', $uri);
+        return $this;
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.getStylesheets"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.getStylesheets">getStylesheets</a>(<span class="param"></span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function getStylesheets(){
+        $list = new yHtmlTagList();
+        foreach ($this-&gt;_registry-&gt;get('css/include', array()) as $uri){
+            $list-&gt;appendChild(yHtmlTag::create(
+                            'link', array(
+                        'rel'=&gt;'stylesheet',
+                        'type'=&gt;'text/css',
+                        'href'=&gt;$uri
+                            ), true
+                    ));
+        }
+        return $list;
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.getScripts"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.getScripts">getScripts</a>(<span class="param"></span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function getScripts(){
+        $list = new yHtmlTagList();
+        foreach ($this-&gt;_registry-&gt;get('js/include', array()) as $uri){
+            $list-&gt;appendChild(yHtmlTag::create(
+                            'script', array(
+                        'type'=&gt;'text/javascript',
+                        'src'=&gt;$uri
+                            ), false
+                    ));
+        }
+        return $list;
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.requireJs"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.requireJs">requireJs</a>(<span class="param">$uri</span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function requireJs($uri){
+        $this-&gt;_registry-&gt;push('js/include', $uri);
+        return $this;
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.css"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.css">css</a>(<span class="param">$cssString</span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3>Small subsets of css can be included directly into the HTML document.
+</h3></div>This reduces the number of requests made by a web page 
+<br />This can reduce the time it takes to display content to the user, especially in older browsers.
+</div></div></div><h3>Source Code</h3><pre class="brush: php">    public function css($cssString){
+        $this-&gt;_registry-&gt;append('css/plain', $cssString);
+        return $this;
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.js"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.js">js</a>(<span class="param">$jsString</span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3>Small subsets of javscript can be included directly into the HTML document.
+</h3></div>This reduces the number of requests made by a web page 
+<br />This can reduce the time it takes to display content to the user, especially in older browsers.
+</div></div></div><h3>Source Code</h3><pre class="brush: php">    public function js($jsString){
+        $this-&gt;_registry-&gt;append('js/plain', $jsString);
+        return $this;
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.getStyleTag"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.getStyleTag">getStyleTag</a>(<span class="param"></span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function getStyleTag(){
+        $css = $this-&gt;_registry-&gt;get('css/plain', '');
+        if (strlen($css)){
+            $tag = new yStyleTag();
+            $tag-&gt;text($css);
+            return $tag;
+        }
+        return new yTextNode();
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.getScriptTag"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.getScriptTag">getScriptTag</a>(<span class="param"></span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function getScriptTag(){
+        $js = $this-&gt;_registry-&gt;get('js/plain', '');
+        if (strlen($js)){
+            $tag = yHtmlTag::create('script', array('type'=&gt;'text/javascript'));
+            $tag-&gt;appendChild(new yJsCommentNode($js));
+            return $tag;
+        }
+        return new yTextNode();
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.getHtmlStart"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.getHtmlStart">getHtmlStart</a>(<span class="param"></span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function getHtmlStart(){
+        $eol = &quot;\r\n&quot;;
+        //&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?
+        return '&lt;!DOCTYPE html&gt;&lt;html lang=&quot;'.$this-&gt;getLanguage().'&quot;&gt;'.&quot;\n&quot;.$this-&gt;getHead();
+    }
+</pre></div><div style="padding: 4px;border: solid 1px #666;"><a name="method.getHead"></a><div style="font-size: 11px;"><div class="classsynopsis"><div class="method"><a href="#method.getHead">getHead</a>(<span class="param"></span>);</div></div><div style="padding: 7px; margin-bottom: 2em; border: dashed 1px #eee; margin-tOP; 1em;"><div style="margin-top: 1em; margin-bottom: 1em;"><div><h3></h3></div></div></div></div><h3>Source Code</h3><pre class="brush: php">    public function getHead(){
+        //&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot;&gt;
+        $head = yHtmlTag::create('head')
+                // http-equiv=&quot;content-type&quot; content=&quot;text/html;charset=utf-8&quot;
+                // charset=&quot;utf-8&quot;
+                -&gt;appendChild(yHtmlTag::create('meta', array('charset'=&gt;$this-&gt;getCharset())))
+                -&gt;appendChild(yHtmlTag::create('meta', array(
+                            'http-equiv'=&gt;'X-UA-Compatible',
+                            'content'=&gt;'IE=edge,chrome=1'
+                        )))
+                //&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+                -&gt;appendChild(yHtmlTag::create('meta', array(
+                            'name'=&gt;'viewport',
+                            'content'=&gt;'width=device-width, initial-scale=1.0'
+                        )))
+                -&gt;appendChild(yHtmlTag::create('title')-&gt;text($this-&gt;getTitle()))
+                -&gt;addMeta('title', htmlspecialchars($this-&gt;getTitle()));
+        if (strlen($this-&gt;getDescription())){
+            $head-&gt;addMeta('description', $this-&gt;getDescription());
+        }
+        foreach ($this-&gt;_meta-&gt;toArray() as $meta){
+            $head-&gt;appendChild($meta);
+        }
+        foreach ($this-&gt;_relations as $rel){
+            $head-&gt;appendChild($rel);
+        }
+        // DO NOT CHANGE: Put external scripts after external stylesheets if possible.
+        $head-&gt;appendChild($this-&gt;getStyleTag());
+        $head-&gt;appendChild($this-&gt;getStylesheets());
+        $head-&gt;appendChild($this-&gt;getScripts());
+        //var_dump(yHtmlTag::create('meta', array('charset'=&gt;$this-&gt;getCharset())));
+        //return $head;
+        // Favicon:
+        $head-&gt;appendChild(yHtmlTag::create('link', array('rel'=&gt;'shortcut icon', 'href'=&gt;'/favicon.ico'), true));
+        // DO NOT CHANGE: Put inline scripts after other resources if possible.
+        $head-&gt;appendChild($this-&gt;getScriptTag());
+        return $head;
+        return substr(yHtmlHelper::format($head), strlen('&lt;?xml version=&quot;1.0&quot;?&gt;') + 1);
+    }
+</pre></div>
+
+
+<h2>Class synopsis</h2>
+<div class="classsynopsis">
+<b class="classname">yPage</b> {
+<div class="contents">
+<h3>/* Properties */</h3>
+<div class="property">protected <a href="#property._meta">$_meta</a>;</div><div class="property">protected <a href="#property._relations">$_relations</a>;</div><div class="property">protected <a href="#property._language">$_language</a>;</div><div class="property">protected <a href="#property._charset">$_charset</a>;</div><div class="property">protected <a href="#property._title">$_title</a>;</div><div class="property">protected <a href="#property._registry">$_registry</a>;</div>
+<h3>/* Methods */</h3>
+<div class="method"><a href="#method.__construct">__construct</a>(<span class="param"></span>);</div><div class="method"><a href="#method.getTitle">getTitle</a>(<span class="param"></span>);</div><div class="method"><a href="#method.setTitle">setTitle</a>(<span class="param">$title</span>);</div><div class="method"><a href="#method.getDescription">getDescription</a>(<span class="param"></span>);</div><div class="method"><a href="#method.setDescription">setDescription</a>(<span class="param">$description</span>);</div><div class="method"><a href="#method.index">index</a>(<span class="param"></span>);</div><div class="method"><a href="#method.noIndex">noIndex</a>(<span class="param"></span>);</div><div class="method"><a href="#method.follow">follow</a>(<span class="param"></span>);</div><div class="method"><a href="#method.noFollow">noFollow</a>(<span class="param"></span>);</div><div class="method"><a href="#method.archive">archive</a>(<span class="param"></span>);</div><div class="method"><a href="#method.noArchive">noArchive</a>(<span class="param"></span>);</div><div class="method"><a href="#method.getLanguage">getLanguage</a>(<span class="param"></span>);</div><div class="method"><a href="#method.setLanguage">setLanguage</a>(<span class="param">$language</span>);</div><div class="method"><a href="#method.getCharset">getCharset</a>(<span class="param"></span>);</div><div class="method"><a href="#method.setCharset">setCharset</a>(<span class="param">$charset</span>);</div><div class="method"><a href="#method.setMeta">setMeta</a>(<span class="param">$name, $content, $isHttp = </span>);</div><div class="method"><a href="#method.addRelation">addRelation</a>(<span class="param">$rel, $href, $attr = Array</span>);</div><div class="method"><a href="#method.setHome">setHome</a>(<span class="param">$href</span>);</div><div class="method"><a href="#method.setIndex">setIndex</a>(<span class="param">$href</span>);</div><div class="method"><a href="#method.setFirst">setFirst</a>(<span class="param">$href</span>);</div><div class="method"><a href="#method.setLast">setLast</a>(<span class="param">$href</span>);</div><div class="method"><a href="#method.setNext">setNext</a>(<span class="param">$href</span>);</div><div class="method"><a href="#method.setPrev">setPrev</a>(<span class="param">$href</span>);</div><div class="method"><a href="#method.setHelp">setHelp</a>(<span class="param">$href</span>);</div><div class="method"><a href="#method.setGlossary">setGlossary</a>(<span class="param">$href</span>);</div><div class="method"><a href="#method.setCopyright">setCopyright</a>(<span class="param">$href</span>);</div><div class="method"><a href="#method.setHttp">setHttp</a>(<span class="param">$name, $content</span>);</div><div class="method"><a href="#method.setGeoCountry">setGeoCountry</a>(<span class="param">$code, $name</span>);</div><div class="method"><a href="#method.setGeoLocation">setGeoLocation</a>(<span class="param">$name</span>);</div><div class="method"><a href="#method.setGeoRegion">setGeoRegion</a>(<span class="param">$name</span>);</div><div class="method">protected <a href="#method._updateGeoRegion">_updateGeoRegion</a>(<span class="param"></span>);</div><div class="method"><a href="#method.setGeoPosition">setGeoPosition</a>(<span class="param">$lat, $lng</span>);</div><div class="method"><a href="#method.requireCss">requireCss</a>(<span class="param">$uri</span>);</div><div class="method"><a href="#method.getStylesheets">getStylesheets</a>(<span class="param"></span>);</div><div class="method"><a href="#method.getScripts">getScripts</a>(<span class="param"></span>);</div><div class="method"><a href="#method.requireJs">requireJs</a>(<span class="param">$uri</span>);</div><div class="method"><a href="#method.css">css</a>(<span class="param">$cssString</span>);</div><div class="method"><a href="#method.js">js</a>(<span class="param">$jsString</span>);</div><div class="method"><a href="#method.getStyleTag">getStyleTag</a>(<span class="param"></span>);</div><div class="method"><a href="#method.getScriptTag">getScriptTag</a>(<span class="param"></span>);</div><div class="method"><a href="#method.getHtmlStart">getHtmlStart</a>(<span class="param"></span>);</div><div class="method"><a href="#method.getHead">getHead</a>(<span class="param"></span>);</div>
+</div>
+}
+</div>
+
+
+</td></tr></table>
+</body>
+</html>
